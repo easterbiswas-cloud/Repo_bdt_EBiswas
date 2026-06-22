@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: emp_dbt_model
+    description: "employee dbt model"
+    columns:
+      - name: emp_id
+        data_tests: 
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1,2,3,4]
+              config:
+                  severity: warn
+
+sources:
+  - name: emp_dbt_model
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables:
+      - name: employees
