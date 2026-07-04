@@ -24,6 +24,8 @@ models:
     description: "dbt model for Sales_SRC"
   - name: product
     description: "DBT model for product"
+  - name: purchase
+    description: "BDT model for purchase"
 
 sources:
   - name: emp_dbt_model
@@ -46,3 +48,8 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables: 
       - name: PRODUCT_SRC
+  - name: purchase
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: PURCHASE_SRC
