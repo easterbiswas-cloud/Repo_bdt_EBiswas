@@ -22,6 +22,8 @@ models:
     description: "customer view bdt model"   
   - name: sales
     description: "dbt model for Sales_SRC"
+  - name: product
+    description: "DBT model for product"
 
 sources:
   - name: emp_dbt_model
@@ -39,3 +41,8 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables: 
       - name: SALES_SRC
+  - name: product
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: PRODUCT_SRC
