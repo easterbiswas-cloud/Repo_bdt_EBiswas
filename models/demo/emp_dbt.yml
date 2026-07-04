@@ -16,6 +16,10 @@ models:
       - name: salary
         data_tests:
           - salary_check
+  - name: customer
+    description: "customer bdt model"   
+  - name: customer_vw
+    description: "customer view bdt model"   
 
 sources:
   - name: emp_dbt_model
@@ -23,3 +27,8 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables:
       - name: employees
+  - name: customer
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables:
+      - name: CUSTOMER_SRC
