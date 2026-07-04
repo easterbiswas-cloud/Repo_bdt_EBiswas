@@ -20,6 +20,8 @@ models:
     description: "customer bdt model"   
   - name: customer_vw
     description: "customer view bdt model"   
+  - name: sales
+    description: "dbt model for Sales_SRC"
 
 sources:
   - name: emp_dbt_model
@@ -32,3 +34,8 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables:
       - name: CUSTOMER_SRC
+  - name: sales
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: SALES_SRC
