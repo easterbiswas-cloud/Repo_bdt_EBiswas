@@ -26,6 +26,10 @@ models:
     description: "DBT model for product"
   - name: purchase
     description: "BDT model for purchase"
+  - name: clean_order
+    description: "BDT model for ephemeral clean_order"
+  - name: final_order
+    description: "BDT model for table filnal_orders"  
 
 sources:
   - name: emp_dbt_model
@@ -53,3 +57,9 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables: 
       - name: PURCHASE_SRC
+  - name: clean_order
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: BASE_ORDERS
+  
