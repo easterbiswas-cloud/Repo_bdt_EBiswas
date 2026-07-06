@@ -28,7 +28,7 @@ models:
     description: "BDT model for purchase"
   - name: clean_order
     description: "BDT model for ephemeral clean_order"
-  - name: final_order
+  - name: final_orders
     description: "BDT model for table filnal_orders"  
 
 sources:
@@ -62,4 +62,10 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables: 
       - name: BASE_ORDERS
-  
+  - name: patient
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: PATIENT_SRC 
+
+
