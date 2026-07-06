@@ -29,7 +29,9 @@ models:
   - name: clean_order
     description: "BDT model for ephemeral clean_order"
   - name: final_orders
-    description: "BDT model for table filnal_orders"  
+    description: "BDT model for table filnal_orders" 
+  - name: session
+    description: "BDT model for table session table"
 
 sources:
   - name: emp_dbt_model
@@ -67,5 +69,13 @@ sources:
     schema: DBT_EASTERBISWASCLOUD
     tables: 
       - name: PATIENT_SRC 
+  - name: session
+    database: DBT_EASTER_DB
+    schema: DBT_EASTERBISWASCLOUD
+    tables: 
+      - name: SESSION_SRC 
+
+
+
 
 
